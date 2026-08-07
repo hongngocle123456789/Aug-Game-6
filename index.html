@@ -312,21 +312,24 @@
         }
 
         /* --- OPENING SCENE STAGING --- */
-        .intro-stage {
+       .intro-stage {
     width: 100%;
     max-width: 720px;
     height: 270px;
-    /* Soft dark radial gradient instead of solid green */
-    background: radial-gradient(circle, #222933 0%, #0d1117 100%);
-    border: 2px solid rgba(255, 215, 0, 0.4);
-    border-radius: 16px;
+    /* INTRO BACKGROUND IMAGE APPLIED HERE */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), /* Dark overlay so Earth stays readable */
+        url('intro-bg.png') no-repeat center center;
+    background-size: cover;
+    border: 3px solid #ffd700; /* Matching your high-contrast hazard theme */
+    border-radius: 20px;
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: inset 0 0 25px rgba(0, 0, 0, 0.8);
-    }
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5), inset 0 0 20px rgba(0,0,0,0.6);
+}
 
         .sad-earth-large {
             width: 230px;
