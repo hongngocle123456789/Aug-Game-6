@@ -17,8 +17,8 @@
         }
 
         body {
-            background-color: #0d1b2a;
-            background: radial-gradient(circle at center, #1b2a4a 0%, #0d1b2a 100%);
+            background-color: #0b1d13;
+            background: radial-gradient(circle at center, #1b3a28 0%, #08140d 100%);
             font-family: 'Fredoka', 'Segoe UI', sans-serif;
             display: flex;
             justify-content: center;
@@ -33,11 +33,11 @@
             width: 800px;
             height: 600px;
             position: relative;
-            background: #0d2318;
-            border: 4px solid #2ecc71;
+            background: #143d23;
+            border: 4px solid #00ff66;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(46, 204, 113, 0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 255, 102, 0.4);
         }
 
         /* --- SCREEN SHAKE ANIMATION --- */
@@ -74,7 +74,7 @@
         }
 
         .hud-panel {
-            background: rgba(13, 37, 25, 0.88);
+            background: rgba(18, 54, 32, 0.92);
             padding: 10px 16px;
             border-radius: 12px;
             color: #fff;
@@ -83,17 +83,17 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            border: 2px solid #73807a;
+            border: 2px solid #00ff66;
             backdrop-filter: blur(4px);
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .hud-timer {
             font-size: 24px;
-            color: #f1c40f;
-            background: rgba(13, 37, 25, 0.9);
+            color: #ffe600;
+            background: rgba(18, 54, 32, 0.92);
             padding: 8px 20px;
-            border-color: #f1c40f;
+            border-color: #ffe600;
         }
 
         /* HEALTH BAR SYSTEM */
@@ -113,8 +113,8 @@
 
         /* COLLECTION TRACKER (TOP RIGHT) */
         #hud-tracker {
-            background: rgba(13, 37, 25, 0.88);
-            border: 2px solid #2ecc71;
+            background: rgba(18, 54, 32, 0.92);
+            border: 2px solid #00ff66;
             border-radius: 12px;
             padding: 8px 14px;
             display: flex;
@@ -125,7 +125,7 @@
         }
 
         .tracker-title {
-            color: #f1c40f;
+            color: #ffe600;
             font-size: 12px;
             text-transform: uppercase;
             text-align: center;
@@ -147,7 +147,7 @@
         }
 
         .tracker-item.collected {
-            color: #2ecc71;
+            color: #00ff66;
             opacity: 1;
             font-weight: bold;
         }
@@ -173,7 +173,7 @@
         }
 
         .hud-btn {
-            background: #2ecc71;
+            background: #00e65c;
             color: #fff;
             border: 2px solid #ffffff;
             border-radius: 50%;
@@ -182,7 +182,7 @@
             font-size: 15px;
             font-weight: bold;
             cursor: pointer;
-            box-shadow: 0 3px 0 #27ae60;
+            box-shadow: 0 3px 0 #00993d;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -190,7 +190,7 @@
         }
         .hud-btn:active {
             transform: translateY(2px);
-            box-shadow: 0 1px 0 #27ae60;
+            box-shadow: 0 1px 0 #00993d;
         }
 
         /* --- FLOATING FEEDBACK POPUP --- */
@@ -219,12 +219,12 @@
         }
 
         #feedback-banner.fb-success {
-            background: rgba(46, 204, 113, 0.95);
+            background: rgba(0, 230, 92, 0.95);
             color: #ffffff;
         }
 
         #feedback-banner.fb-error {
-            background: rgba(231, 76, 60, 0.95);
+            background: rgba(255, 51, 51, 0.95);
             color: #ffffff;
         }
 
@@ -233,15 +233,14 @@
             color: #ecf0f1;
         }
 
-        /* --- UI OVERLAYS & SCREENS --- */
+        /* --- UI OVERLAYS & SCREENS (BRIGHTENED) --- */
         .screen {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, rgba(12, 28, 20, 0.96) 0%, rgba(6, 18, 12, 0.98) 100%);
-            backdrop-filter: blur(8px);
+            background: linear-gradient(180deg, #184e2c 0%, #0d2c18 100%);
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -257,67 +256,67 @@
             display: none !important;
         }
 
-        /* --- HIGH-IMPACT TITLE BADGE --- */
+        /* --- HIGH-IMPACT VIBRANT TITLE --- */
         .game-title {
-            font-size: 42px;
+            font-size: 46px;
             font-weight: 900;
-            color: #2ecc71;
-            text-shadow: 0 4px 0 #1b5e20, 0 8px 15px rgba(0,0,0,0.6);
-            letter-spacing: 2.5px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-bottom: 4px;
-            background: linear-gradient(180deg, #a8ff78 0%, #78ffd6 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 4px 10px rgba(46, 204, 113, 0.4));
+            color: #ffffff;
+            text-shadow: 
+                0 0 10px #00ff66,
+                0 0 20px #00ff66,
+                0 4px 0 #008033,
+                0 6px 12px rgba(0,0,0,0.6);
+            filter: drop-shadow(0 0 8px rgba(0, 255, 102, 0.8));
         }
 
         /* --- BUTTONS --- */
         .btn-main {
-            background: linear-gradient(180deg, #2ecc71 0%, #27ae60 100%);
-            color: white;
+            background: linear-gradient(180deg, #00ff66 0%, #00b347 100%);
+            color: #03210e;
             border: 3px solid #ffffff;
-            font-size: 20px;
-            font-weight: 800;
-            padding: 14px 44px;
+            font-size: 22px;
+            font-weight: 900;
+            padding: 14px 48px;
             border-radius: 50px;
             cursor: pointer;
-            box-shadow: 0 6px 0 #155d27, 0 10px 20px rgba(0,0,0,0.5);
+            box-shadow: 0 6px 0 #006629, 0 10px 25px rgba(0, 255, 102, 0.5);
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.4);
             transition: all 0.2s ease;
             animation: pulseBtn 2s infinite ease-in-out;
         }
         .btn-main:hover {
-            background: linear-gradient(180deg, #34d07b 0%, #2ecc71 100%);
+            background: linear-gradient(180deg, #33ff85 0%, #00cc52 100%);
             transform: translateY(-2px) scale(1.04);
-            box-shadow: 0 8px 0 #155d27, 0 14px 25px rgba(46, 204, 113, 0.4);
+            box-shadow: 0 8px 0 #006629, 0 14px 30px rgba(0, 255, 102, 0.7);
         }
         .btn-main:active {
             transform: translateY(4px) scale(0.98);
-            box-shadow: 0 2px 0 #155d27;
+            box-shadow: 0 2px 0 #006629;
         }
 
         @keyframes pulseBtn {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.03); box-shadow: 0 6px 0 #155d27, 0 0 25px rgba(46, 204, 113, 0.6); }
+            50% { transform: scale(1.04); box-shadow: 0 6px 0 #006629, 0 0 30px rgba(0, 255, 102, 0.8); }
         }
 
-        /* --- OPENING SCENE STAGING --- */
+        /* --- OPENING SCENE STAGING (BRIGHT STAGE) --- */
         .intro-stage {
             width: 100%;
-            max-width: 700px;
+            max-width: 720px;
             height: 270px;
-            background: radial-gradient(circle, rgba(46, 204, 113, 0.15) 0%, rgba(0, 0, 0, 0.4) 80%);
-            border: 2px solid rgba(46, 204, 113, 0.4);
+            background: radial-gradient(circle, #256b3f 0%, #123820 100%);
+            border: 3px solid #00ff66;
             border-radius: 20px;
             position: relative;
             overflow: hidden;
             display: flex;
             justify-content: center;
             align-items: center;
-            box-shadow: inset 0 0 30px rgba(0,0,0,0.8);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.4), inset 0 0 20px rgba(0,255,102,0.2);
         }
 
         .sad-earth-large {
@@ -325,7 +324,7 @@
             height: 230px;
             object-fit: contain;
             z-index: 2;
-            filter: drop-shadow(0 12px 20px rgba(0,0,0,0.7));
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
             animation: floatEarth 3.5s ease-in-out infinite alternate;
         }
 
@@ -336,10 +335,11 @@
 
         /* OPENING STORY TEXT */
         .story-fade-in {
-            font-size: 17px;
-            font-weight: 600;
-            color: #d1f2eb;
-            max-width: 650px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+            max-width: 680px;
             line-height: 1.5;
             animation: fadeInText 0.8s ease-out forwards;
         }
@@ -353,7 +353,7 @@
         .guide-container {
             width: 100%;
             max-width: 760px;
-            background: rgba(255, 255, 255, 0.96);
+            background: #ffffff;
             border-radius: 16px;
             padding: 16px;
             color: #2c3e50;
@@ -387,8 +387,8 @@
             min-height: 160px;
         }
 
-        .guide-card.accept { border-color: #2ecc71; background: #e8f8f5; }
-        .guide-card.avoid { border-color: #e74c3c; background: #fadbd8; }
+        .guide-card.accept { border-color: #00e65c; background: #e8f8f5; }
+        .guide-card.avoid { border-color: #ff3333; background: #fadbd8; }
 
         .guide-card img {
             width: 68px;         
@@ -416,7 +416,7 @@
             line-height: 1.1;
         }
 
-        /* --- EDUCATIONAL CTA BOX WITH EQUAL SPACING --- */
+        /* --- EDUCATIONAL CTA BOX --- */
         .cta-box {
             background: #ffffff;
             color: #2c3e50;
@@ -426,12 +426,12 @@
             width: 100%;
             margin: 10px 0;
             text-align: center;
-            border: 3px solid #f1c40f;
-            box-shadow: 0 6px 20px rgba(241, 196, 15, 0.3);
+            border: 3px solid #ffe600;
+            box-shadow: 0 6px 20px rgba(255, 230, 0, 0.4);
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between; /* Spreads elements out cleanly */
+            justify-content: space-between;
             gap: 12px;
         }
         .cta-box .cta-intro {
@@ -459,7 +459,7 @@
             gap: 8px;
         }
         .cta-box .cta-checklist li .check-icon {
-            color: #2ecc71;
+            color: #00e65c;
             font-size: 18px;
             font-weight: 900;
         }
@@ -476,7 +476,7 @@
             width: 100%;
         }
         .summary-box h3 {
-            color: #27ae60;
+            color: #00b347;
             margin-bottom: 6px;
             text-align: center;
             font-size: 14px;
@@ -546,10 +546,10 @@
     <!-- 2. ITEM GUIDE SCREEN -->
     <div id="screen-guide" class="screen hidden">
         <div class="guide-container">
-            <div class="guide-title" style="color: #2ecc71;">✔ ACCEPTED PLASTICS (COLLECT ALL 6)</div>
+            <div class="guide-title" style="color: #00e65c;">✔ ACCEPTED PLASTICS (COLLECT ALL 6)</div>
             <div class="guide-grid" id="guide-accepted-grid"></div>
 
-            <div class="guide-title" style="color: #e74c3c;">✖ NOT ACCEPTED ITEMS (AVOID THESE)</div>
+            <div class="guide-title" style="color: #ff3333;">✖ NOT ACCEPTED ITEMS (AVOID THESE)</div>
             <div class="guide-grid" id="guide-avoid-grid"></div>
         </div>
         <button class="btn-main" onclick="startGame()">START MISSION</button>
@@ -557,23 +557,23 @@
 
     <!-- 3. PAUSE SCREEN -->
     <div id="screen-pause" class="screen hidden" style="justify-content: center;">
-        <h1 style="color: #f1c40f; font-size: 36px; text-shadow: 2px 2px 4px #000; margin-bottom: 20px;">GAME PAUSED</h1>
+        <h1 style="color: #ffe600; font-size: 36px; text-shadow: 2px 2px 4px #000; margin-bottom: 20px;">GAME PAUSED</h1>
         <div style="display: flex; flex-direction: column; gap: 12px; width: 240px;">
             <button class="btn-main" onclick="togglePause()">RESUME</button>
-            <button class="btn-main" style="background: #e67e22; box-shadow: 0 6px 0 #a04000;" onclick="showItemGuide()">ITEM GUIDE</button>
-            <button class="btn-main" style="background: #3498db; box-shadow: 0 6px 0 #1d6fa5;" onclick="resetToIntro()">PLAY AGAIN</button>
+            <button class="btn-main" style="background: #ff9900; box-shadow: 0 6px 0 #b36b00; color: #fff;" onclick="showItemGuide()">ITEM GUIDE</button>
+            <button class="btn-main" style="background: #3399ff; box-shadow: 0 6px 0 #005cbf; color: #fff;" onclick="resetToIntro()">PLAY AGAIN</button>
         </div>
     </div>
 
     <!-- 4. VICTORY ENDING SCENE -->
     <div id="screen-victory" class="screen hidden" style="justify-content: flex-start; padding-top: 15px; overflow-y: auto;">
-        <h1 style="color: #2ecc71; font-size: 28px; text-shadow: 2px 2px 4px #000; margin-bottom: 8px;">🎉 CONGRATULATIONS!</h1>
+        <h1 style="color: #00ff66; font-size: 28px; text-shadow: 2px 2px 4px #000; margin-bottom: 8px;">🎉 CONGRATULATIONS!</h1>
         
-        <div class="intro-stage" style="background: linear-gradient(to bottom, #87ceeb 0%, #a8e6cf 100%); height: 140px; margin-bottom: 8px; border-color: #2ecc71;">
+        <div class="intro-stage" style="background: linear-gradient(to bottom, #87ceeb 0%, #a8e6cf 100%); height: 140px; margin-bottom: 8px; border-color: #00ff66;">
             <img src="happy-earth.png" alt="Happy Earth" style="max-height: 120px; object-fit: contain;">
         </div>
 
-        <div style="font-size: 15px; margin-bottom: 6px; font-weight: 700; color: #e8f8f5;">
+        <div style="font-size: 15px; margin-bottom: 6px; font-weight: 700; color: #ffffff;">
             You found every type of plastic our booth accepts and saved the Earth!<br>
             <strong>You're our Plastic Hero!</strong>
         </div>
@@ -603,13 +603,13 @@
 
     <!-- 5. GAME OVER SCENE -->
     <div id="screen-gameover" class="screen hidden" style="justify-content: flex-start; padding-top: 15px; overflow-y: auto;">
-        <h1 style="color: #e74c3c; font-size: 28px; text-shadow: 2px 2px 4px #000; margin-bottom: 8px;">WE KNOW YOU TRIED YOUR BEST!</h1>
+        <h1 style="color: #ff4d4d; font-size: 28px; text-shadow: 2px 2px 4px #000; margin-bottom: 8px;">WE KNOW YOU TRIED YOUR BEST!</h1>
         
-        <div class="intro-stage" style="background: linear-gradient(to bottom, #2c3e50 0%, #000000 100%); height: 140px; margin-bottom: 8px; border-color: #e74c3c;">
+        <div class="intro-stage" style="background: linear-gradient(to bottom, #2c3e50 0%, #000000 100%); height: 140px; margin-bottom: 8px; border-color: #ff4d4d;">
             <img src="sad-earth.png" alt="Sad Earth" style="max-height: 120px; object-fit: contain;">
         </div>
 
-        <div style="color: #ecf0f1; font-size: 15px; margin-bottom: 6px; font-weight: 700;">
+        <div style="color: #ffffff; font-size: 15px; margin-bottom: 6px; font-weight: 700;">
             You found <span id="collected-count">0</span> out of 6 accepted plastic types.<br>
             The Earth needs more Plastic Heroes like you!<br>
             Try again and free the Earth from its plastic prison.
@@ -983,7 +983,7 @@ function createSparkles(x, y) {
             vx: (Math.random() - 0.5) * 6,
             vy: (Math.random() - 0.5) * 6,
             life: 1.0,
-            color: '#2ecc71'
+            color: '#00ff66'
         });
     }
 }
@@ -1065,7 +1065,7 @@ function renderGame() {
     if (LOADED_IMAGES.bg) {
         ctx.drawImage(LOADED_IMAGES.bg, 0, 0, canvas.width, canvas.height);
     } else {
-        ctx.fillStyle = '#112d1c';
+        ctx.fillStyle = '#143d23';
         ctx.fillRect(0, 0, canvas.width, canvas.height);
     }
 
